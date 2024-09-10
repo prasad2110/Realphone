@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Store</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <div class="main">
+        <nav class="nav">
+            <div class="logo">
+                <img src="image/logo.png" alt="Logo">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay">
+                <img src="image/mobile.png" class="mobile" alt="Mobile">
+
+
+                <div id="circle">
+                    <div class="feature one">
+                        <img src="image/camera.png" alt="Camera">
+                        <div class="feature-text">
+                            <h1>Camera</h1>
+                            <p>12MP, Wide Angle Lens</p>
+                        </div>
+                    </div>
+                    <div class="feature two">
+                        <img src="image/processor.png" alt="Processor">
+                        <div class="feature-text">
+                            <h1>Processor</h1>
+                            <p>Snapdragon octa-core 11nm</p>
+                        </div>
+                    </div>
+                    <div class="feature three">
+                        <img src="image/display.png" alt="Display">
+                        <div class="feature-text">
+                            <h1>Display</h1>
+                            <p>6.5" Mini-Drop Fullscreen</p>
+                        </div>
+                    </div>
+                    <div class="feature four">
+                        <img src="image/battery.png" alt="Battery">
+                        <div class="feature-text">
+                            <h1>Battery</h1>
+                            <p>5000mAh, 720Hrs standby</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="image/arrow.png" id="upbtn" alt="Up Arrow">
+            <h3>Features</h3>
+            <img src="image/arrow.png" id="downbtn" alt="Down Arrow">
+        </div>
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upbtn = document.getElementById("upbtn");
+        var downbtn = document.getElementById("downbtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upbtn.onclick = function () {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+        downbtn.onclick = function () {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</body>
+
+</html>
